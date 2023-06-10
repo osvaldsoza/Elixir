@@ -3,7 +3,8 @@ defmodule ListFilterOddNumbers do
 
   defp count_odd_numbers(list) do
     numbers = convert_string_to_integer(list)
-    Enum.count(numbers, fn number -> rem(number, 2) != 0 end)
+    total_odd_numbers = Enum.count(numbers, fn number -> rem(number, 2) != 0 end)
+    "Total odd numbers is: #{total_odd_numbers}"
   end
 
   defp convert_string_to_integer(list) do
