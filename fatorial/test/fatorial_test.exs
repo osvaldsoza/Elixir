@@ -5,7 +5,9 @@ defmodule FatorialTest do
     test "should return 120" do
       response = Fatorial.op(5)
 
-      assert response == 120
+      expected_response = 120
+
+      assert response == expected_response
     end
   end
 

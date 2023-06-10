@@ -14,7 +14,7 @@ defmodule ListFilterOddNumbersTest do
   end
 
   describe "call/2" do
-    test "should return count equal 0" do
+    test "should return count equal 0 when list only string" do
       str_list = ["banana", "abc"]
 
       count = ListFilterOddNumbers.call(str_list)
