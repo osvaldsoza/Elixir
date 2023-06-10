@@ -2,11 +2,11 @@ defmodule ListFilterOddNumbers do
   def call(list), do: count_odd_numbers(list)
 
   defp count_odd_numbers(list) do
-    numbers = convert_integer(list)
+    numbers = convert_string_to_integer(list)
     Enum.count(numbers, fn number -> rem(number, 2) != 0 end)
   end
 
-  defp convert_integer(list) do
+  defp convert_string_to_integer(list) do
     Enum.flat_map(list, fn num ->
       case Integer.parse(num) do
         {int, _} -> [int]
